@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .update-form fieldset{
+        width:400px;
+      
+    }
+
+    .update-form{
+        width:400px;
+     
+    }
+
+    .update-form button{
+      float: right;
+      margin-right:13px ;
+    }
+</style>
+
+<script>
+    function dateUpdate(){
+        let date = document.getElementById("update-date").value;
+
+        var date_regex = /^\d{4}-\d{2}-\d{2}$/
+        
+       
+        let dat =[];
+        if (date_regex.test(date)) {
+           alert("This page was last updated: "+ date);
+           dat.push(date)
+           
+        }
+        else{
+          alert("Invalid date format");
+        }
+        localStorage.setItem("Date update",JSON.stringify(dat))
+        
+     
+        // if (date == ""){
+        //     alert("Please enter date")
+        // }else if(date_regex.test(date)){
+        //     alert(date);
+        // }
+    }
+
+    function capitalletter(){
+        let str ="i love javascript programming with all my heart";
+        let cap = str.toUpperCase();
+       
+        for (let i = 0;i < 5;i++) {
+         console.log(cap)
+            
+        }
+    }
+    capitalletter()
+    </script>
+<body>
+    
+    <div class="update-form">
+        <fieldset>
+            <legend>Update Date</legend>
+            <label>When was the website updated?:</label>
+            <input type="text" placeholder="YYYY-MM-DD" id="update-date">
+            <br>
+            <br>
+            <br>
+            <button onclick="dateUpdate()">Send update date</button>
+        </fieldset>
+    </div>
+
+</body>
+</html>

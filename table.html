@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function myArra() {
+        var table = '';
+
+        let cars = [["myArray", " BMW M4"], 
+                    ["myArray", "Nissan Versa"],
+                    ["myArray", "Honda Civic"],
+                    [" myArray", "Hyundai Elantra Hybrid"],
+                    [" myArray", "Nissan Magnite"],
+                    ["myArray", "Hyundai Alcazar"]
+                    ]
+
+// cars.pop()
+
+// cars.unshift(["myArray", "Mercedes Benz S-Class"])
+        for (r = 0; r < cars.length; r++) {
+            table += '<tr>';
+            for (c = 0; c < 1; c++) {
+                table += '<td>' + cars[r][0] + `[${r}]`+ '</td>' + '<td>' + cars[r][1] + '</td>';
+
+            }
+            table += '</tr>';
+        }
+        
+
+
+        // Two dimensional table with two 1 dimensional array
+        // let car =[" BMW M4","Nissan Versa","Honda Civic","Hyundai Elantra Hybrid", "Nissan Magnite","Hyundai Alcazar"]
+
+        //     let array =["myArray[0]","myArray[1]","myArray[2]" , " myArray[3]"," myArray[4]", "myArray[5]"]
+
+
+
+        // Remove the last items from the array
+        // car.pop()
+        // array.pop()
+
+        // Replace the first items from the array
+
+        // car.shift()
+        // car.unshift(" Mercedes Benz S-Class[0]")
+
+
+        // for ( r = 0; r < car.length ; r++) {
+        //     table += '<tr>';
+        //     for ( c = 0; c < 1; c++) {
+        //         table += '<th id=tab>' +  array[r] + '</th>' +  '<td>' +  car[r] + '</td>';
+
+        //     }
+        //     table += '</tr>';
+        // }
+
+        document.write('<table id=table border=1><th colspan=2>Cars in my Garage</th>' + table + '</table>');
+
+
+    }
+
+
+    myArra()
+
+</script>
+
+<style>
+    #table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    th {
+        width: 50%;
+        height: 30px;
+    }
+
+    td {
+        width: 50%;
+        height: 30px;
+    }
+</style>
+
+<body>
+
+ 
+
+
+</body>
+
+</html>
